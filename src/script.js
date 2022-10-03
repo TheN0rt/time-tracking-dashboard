@@ -8,7 +8,7 @@ const setValue = (json, liText) => {
       json[index].timeframes[liText].current + 'hr' : json[index].timeframes[liText].current + 'hrs'
 
       timePrev[index].textContent = 
-      json[index].timeframes.weekly.previous == 1 ? 'Previous - ' + json[index].timeframes.weekly.previous + 'hr' : 'Previous - ' + json[index].timeframes.weekly.previous + 'hrs'
+      json[index].timeframes[liText].previous == 1 ? 'Previous - ' + json[index].timeframes[liText].previous + 'hr' : 'Previous - ' + json[index].timeframes[liText].previous + 'hrs'
    }
 }
 const getValue = async () => {
