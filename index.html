@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="time">
+        <div class="report">
+          <div class="report__container">
+            <div class="report__user user">
+              <div class="user__avatar">
+                <img src="./images/image-jeremy.png" alt="user">
+              </div>
+              <p class="user__for">Report for</p>
+              <h1 class="user__name">Jeremy Robson</h1>
+            </div>
+            <div class="time__variants">
+              <ul>
+                <li>Daily</li>
+                <li>Weekly</li>
+                <li>Monthly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="time__folder">
+          <div class="time__action action">
+            <div class="action__name">
+              <span class="name">Work</span>
+              <span class="dots">...</span>
+            </div>
+            <h2 class="time__now">5hrs</h2>
+            <p class="time__prev">Previous - 7hrs</p>
+          </div>
+        </div>
+
+        <div class="time__folder">
+          <div class="time__action action">
+            <div class="action__name">
+              <span class="name">Play</span>
+              <span class="dots">...</span>
+            </div>
+            <h2 class="time__now">1hr</h2>
+            <p class="time__prev">Previous - 2hrs</p>
+          </div>
+        </div>
+
+        <div class="time__folder">
+          <div class="time__action action">
+            <div class="action__name">
+              <span class="name">Study</span>
+              <span class="dots">...</span>
+            </div>
+            <h2 class="time__now">0hrs</h2>
+            <p class="time__prev">Previous - 1hr</p>
+          </div>
+        </div>
+
+        <div class="time__folder">
+          <div class="time__action action">
+            <div class="action__name">
+              <span class="name">Exercise</span>
+              <span class="dots">...</span>
+            </div>
+            <h2 class="time__now">1hr</h2>
+            <p class="time__prev">Previous - 1hr</p>
+          </div>
+        </div>
+
+        <div class="time__folder">
+          <div class="time__action action">
+            <div class="action__name">
+              <span class="name">Social</span>
+              <span class="dots">...</span>
+            </div>
+            <h2 class="time__now">1hr</h2>
+            <p class="time__prev">Previous - 3hrs</p>
+          </div>
+        </div>
+
+        <div class="time__folder">
+          <div class="time__action action">
+            <div class="action__name">
+              <span class="name">Self Care</span>
+              <span class="dots">...</span>
+            </div>
+            <h2 class="time__now">0hrs</h2>
+            <p class="time__prev">Previous - 1hr</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- <script src="./data.json"></script> -->
+  <script src="./src/script.js"></script>
+</body>
+</html>

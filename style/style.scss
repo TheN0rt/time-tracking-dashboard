@@ -1,0 +1,286 @@
+$blue: hsl(246, 80%, 60%);
+
+$LightRedWork: hsl(15, 100%, 70%);
+$SoftBluePlay: hsl(195, 74%, 62%);
+$LightRedStudy: hsl(348, 100%, 68%);
+$LimeGreenExercise: hsl(145, 58%, 55%);
+$VioletSocial: hsl(264, 64%, 52%);
+$SoftOrangeSelf: hsl(43, 84%, 65%);
+
+$VeryDarkBlue: hsl(226, 43%, 10%);
+$DarkBlue: hsl(235, 46%, 20%);
+$DesaturatedBlue: hsl(235, 45%, 61%);
+$PaleBlue: hsl(236, 100%, 87%);
+
+*{
+   padding: 0;
+   margin: 0;
+   line-height: 1.5;
+}
+
+a{
+   text-decoration: none;
+   color: black;
+}
+
+li{
+   list-style: none;
+}
+
+html,body{
+   min-height: 100vh;
+   font-family: 'Rubik', sans-serif;
+
+}
+
+.wrapper{
+   height: 100vh;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   background-color: $VeryDarkBlue;
+}
+
+main{
+   display: flex;
+   margin: auto;
+   
+   .time{
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      max-width: 80%;
+      gap: 20px;
+      
+
+      .report{
+         grid-column: 1/2;
+         grid-row: 1/3;
+         display: flex;
+         flex-direction: column;
+         border-radius: 20px;
+         background-color: $DarkBlue;
+         
+
+         .report__container{
+            
+            .user{
+               background-color: $blue;
+               border-radius: 10px;
+               padding: 20px 40px 20px;
+      
+               .user__avatar{
+                  display: flex;
+                  max-width: 40%;
+                  margin-bottom: 30px;
+      
+                  img{
+                     max-width: 100%;
+                     border: 3px solid white;
+                     border-radius: 50%;
+                  }
+               }
+
+               .user__for{
+                  color: $PaleBlue;
+               }
+
+               .user__name{
+                  color: white;
+                  font-weight: 300;
+                  margin-bottom: 80px;
+               }
+            }
+      
+            .time__variants{
+               padding: 25px;
+               border-radius: 10px;
+               ul{
+
+                  li{
+                     color: $DesaturatedBlue;
+                     margin-bottom: 10px;
+                     cursor: pointer;
+
+                     &:hover{
+                        color: white;
+                     }
+                  }
+
+                  .active{
+                     color: white;
+                  }
+               }
+            }
+         }
+
+      
+      }
+
+      .time__folder{
+
+         &:nth-child(2){
+            background: url('../images/icon-work.svg') no-repeat;
+            background-color: $LightRedWork;
+            background-position: top right;
+         }
+
+         &:nth-child(3){
+            background: url('../images/icon-play.svg') no-repeat;
+            background-color: $SoftBluePlay;
+            background-position: top right;
+         }
+
+         &:nth-child(4){
+            background: url('../images/icon-study.svg') no-repeat;
+            background-color: $LightRedStudy;
+            background-position: top right;
+         }
+
+         &:nth-child(5){
+            background: url('../images/icon-exercise.svg') no-repeat;
+            background-color: $LimeGreenExercise;
+            background-position: top right;
+         }
+
+         &:nth-child(6){
+            background: url('../images/icon-social.svg') no-repeat;
+            background-color: $VioletSocial;
+            background-position: top right;
+         }
+
+         &:nth-child(7){
+            background: url('../images/icon-self-care.svg') no-repeat;
+            background-color: $SoftOrangeSelf;
+            background-position: top right;
+         }
+
+
+         border-radius: 25px;
+         position:relative;
+
+         .action{
+            box-sizing: border-box;
+            position:absolute;
+            bottom:0;  
+            padding: 20px 30px;
+            background-color: $DarkBlue;
+            border-radius: 20px;
+            min-width: 100%;
+            color: white;
+            cursor: pointer;
+
+            &:hover{
+               background-color: $DesaturatedBlue;
+            }
+
+            .action__name{
+               display: flex;
+               justify-content: space-between;
+               align-items: flex-end;
+               margin-bottom: 10px;
+               font-size: 18px;
+               font-weight: 300;
+
+               .name{
+                  font-size: 1.3em;
+                  //align-self: baseline;
+               }
+
+               .dots{
+                  //align-self: flex-start;
+                  font-size: 2em;
+                  cursor: pointer;
+               }
+            }
+
+            .time__now{
+               font-size: 3em;
+               font-weight: 300;
+            }
+
+            .time__prev{
+               color: $PaleBlue;
+            }
+
+            
+
+         }
+      } 
+   }
+}
+
+@media (max-width: 1020px){
+   main .time{
+      max-width: 90%;
+   }
+}
+
+@media (max-width: 890px){
+   main .time{
+      max-width: 95%;
+   }
+}
+
+@media (max-width: 850px){
+   .wrapper{
+      overflow: auto;
+   }
+   main {
+      margin-top: 30px;
+      justify-content: center;
+      min-height: 100vh;
+      .time{
+         margin: 0;
+         display: flex;
+         flex-direction: column;
+         max-width: 95%;
+         justify-content: space-around;
+
+         .report{
+
+            .report__container{
+   
+                  .user{
+
+                     .user__name{
+                        margin-bottom: 0;
+                     }
+                  }
+                  
+               .time__variants{
+   
+                  ul{
+                     display: flex;
+                     justify-content: space-between;
+                  }
+               }
+            }
+            
+         }
+
+         .time__folder{
+            min-height: 200px;
+
+            .action{
+               padding: 20px;
+
+               .time__now, .time__prev{
+                  display: inline-block;
+                  width: 47%;
+               }
+
+               .time__now{
+                  //margin-right: 60px;
+                  font-size: 30px;
+               }
+
+               .time__prev{
+                  text-align: end;
+               }
+            }
+         }
+      }
+   }
+}
