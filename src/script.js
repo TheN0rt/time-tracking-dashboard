@@ -8,8 +8,7 @@ const setValue = (json, liText) => {
       json[index].timeframes[liText].current + 'hr' : json[index].timeframes[liText].current + 'hrs'
 
       timePrev[index].textContent = 
-      json[index].timeframes[liText].previous == 1 ? 
-      'Previous - ' + json[index].timeframes[liText].previous + 'hr' : 'Previous - ' + json[index].timeframes[liText].previous + 'hrs'
+      json[index].timeframes[liText].previous == 1 ? 'Previous - ' + json[index].timeframes[liText].previous + 'hr' : 'Previous - ' + json[index].timeframes[liText].previous + 'hrs'
    }
 }
 const getValue = async () => {
@@ -18,6 +17,8 @@ const getValue = async () => {
    .then(json => {
       document.querySelectorAll('.time__variants ul li').forEach(li => {
          li.onclick = () => {
+            if(document.querySelector('.active')) document.querySelector('.active').classList.remove('active')
+            li.classList.add('active')
             let liText = li.textContent.toLowerCase()
             setValue(json, liText)        
          }
